@@ -2,6 +2,8 @@
 header("Pragma: no-cache");
 header("Cache-Control: no-cache");
 header("Expires: 0");
+include('../dbconnection.php');
+session_start();
 // following files need to be included
 require_once("./lib/config_paytm.php");
 require_once("./lib/encdec_paytm.php");
@@ -23,7 +25,7 @@ $paramList["INDUSTRY_TYPE_ID"] = $INDUSTRY_TYPE_ID;
 $paramList["CHANNEL_ID"] = $CHANNEL_ID;
 $paramList["TXN_AMOUNT"] = $TXN_AMOUNT;
 $paramList["WEBSITE"] = PAYTM_MERCHANT_WEBSITE;
-$paramList["CALLBACK_URL"] = "http://localhost/elearning/PaytmKit/pgResponse.php";
+$paramList["CALLBACK_URL"] = "http://localhost/quicklylearner/PaytmKit/pgResponse.php";
 /*
 $paramList["CALLBACK_URL"] = "http://localhost/PaytmKit/pgResponse.php";
 $paramList["MSISDN"] = $MSISDN; //Mobile number of customer
@@ -48,7 +50,7 @@ $checkSum = getChecksumFromArray($paramList,PAYTM_MERCHANT_KEY);
 			<tbody>
 			<?php
 			foreach($paramList as $name => $value) {
-				echo '<input type="hidden" name="' . $name .'" value="' . $value . '">';
+				echo '<input type="hidden" name="' . $name .'" value="'.$value.'">';
 			}
 			?>
 			<input type="hidden" name="CHECKSUMHASH" value="<?php echo $checkSum ?>">
