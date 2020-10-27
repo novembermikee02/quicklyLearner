@@ -1,7 +1,10 @@
 
 <h1> Quickly Learner </h1>
 
-![4k18qp](https://user-images.githubusercontent.com/61339435/97339241-597f0100-18a8-11eb-86b6-a4698f6363da.gif)
+
+
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/61339435/97340381-b62eeb80-18a9-11eb-9831-637edac7d0f3.gif)
+
 
     
 
